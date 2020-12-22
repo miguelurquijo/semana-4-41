@@ -9,7 +9,7 @@ module.exports = {
         try {
 
             const listadoUsuarios = await Usuario.findAll()
-            res.status(200).json({listadoUsuarios})
+            res.status(200).json(listadoUsuarios)
             
         } catch (error) {
             res.status(500).json({'error' : 'Oops paso algo'})

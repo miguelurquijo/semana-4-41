@@ -7,7 +7,7 @@ module.exports = {
         try {
 
             const listadoCategorias = await Categoria.findAll()
-            res.status(200).json({listadoCategorias});
+            res.status(200).json(listadoCategorias);
             
         } catch (error) {
             res.status(500).json({'error' : 'Oops paso algo'});
@@ -19,7 +19,7 @@ module.exports = {
         try {
 
             const addCategoria = await Categoria.create( req.body )
-            res.status(200).json({addCategoria});
+            res.status(200).json(addCategoria);
             
         } catch (error) {
             res.status(500).json({'error' : 'Oops paso algo'});

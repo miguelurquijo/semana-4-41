@@ -6,8 +6,8 @@ module.exports = {
     list : async (req, res, next) => {
         try {
 
-            const listadoUsuarios = await Articulo.findAll();
-            res.status(200).json({listadoUsuarios});
+            const listadoArticulos = await Articulo.findAll();
+            res.status(200).json(listadoArticulos);
             
         } catch (error) {
             res.status(500).json({'error' : 'Oops paso algo'});
